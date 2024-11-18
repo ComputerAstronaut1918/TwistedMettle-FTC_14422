@@ -1,0 +1,160 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="tQ?`zs]^^-wn_T3t-Kc7">up target</variable>
+<variable id="w/F(1@vh.t.,`K=#2L/a">down target</variable>
+<variable id="(tOAm#=uSI8l9FE*1t1z">Speed</variable>
+<variable id="Cp~:]z_Iur.z6O=^nu!}">UpPos</variable>
+</variables>
+<block type="procedures_defnoreturn" id="WtpyD@tEu+EoY=P9iY,D" deletable="false" x="50" y="50">
+<field name="NAME">runOpMode</field>
+<comment pinned="false" h="45" w="532">This function is executed when this Op Mode is selected from the Driver Station.</comment>
+<statement name="STACK">
+<block type="dcMotor_setProperty_RunMode" id="x%Y?OcY=;)oh1J-ZH[:9">
+<field name="IDENTIFIER">testAsDcMotor</field>
+<field name="PROP">Mode</field>
+<data>{"IDENTIFIER":"test"}</data>
+<value name="VALUE">
+<shadow type="dcMotor_typedEnum_runMode" id="Oeva-AreCoXGLeC*n8t{">
+<field name="RUN_MODE">STOP_AND_RESET_ENCODER</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setProperty_Direction" id="G2Ak0f88oZ[Px_X5^~N9">
+<field name="IDENTIFIER">testAsDcMotor</field>
+<field name="PROP">Direction</field>
+<data>{"IDENTIFIER":"test"}</data>
+<value name="VALUE">
+<shadow type="dcMotor_typedEnum_direction" id="b0]lX+$fA}c-Un}^,GKF">
+<field name="DIRECTION">REVERSE</field>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id="~v^p.t_tnl(ZX.K)Rfb_">
+<field name="VAR" id="Cp~:]z_Iur.z6O=^nu!}">UpPos</field>
+<value name="VALUE">
+<block type="math_number" id="S0m0yTz{waR7vVH=Y^+(">
+<field name="NUM">10</field>
+</block>
+</value>
+<next>
+<block type="linearOpMode_waitForStart" id="9cf6JWm:gdB*4;ey}zFz">
+<next>
+<block type="procedures_callnoreturn" id="5w^D:0E(AZ2Jp#u,6RLs">
+<mutation name="Lift">
+<arg name="up target"/>
+<arg name="down target"/>
+<arg name="Speed"/>
+</mutation>
+<value name="ARG0">
+<block type="math_number" id="PBH0+tM7F(=cDJ[.}|uU">
+<field name="NUM">30</field>
+</block>
+</value>
+<value name="ARG1">
+<block type="math_number" id="iq2f+cOb^FP6k`jmk(=@">
+<field name="NUM">1</field>
+</block>
+</value>
+<value name="ARG2">
+<block type="math_number" id="^pw.rXSs%k;%l9Vb;`4i">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="procedures_defnoreturn" id="Wjhb]h]}1t4M0E2@21KL" x="434" y="197">
+<mutation>
+<arg name="up target" varid="tQ?`zs]^^-wn_T3t-Kc7"/>
+<arg name="down target" varid="w/F(1@vh.t.,`K=#2L/a"/>
+<arg name="Speed" varid="(tOAm#=uSI8l9FE*1t1z"/>
+</mutation>
+<field name="NAME">Lift</field>
+<comment pinned="false" h="80" w="160">Describe this function...</comment>
+<statement name="STACK">
+<block type="math_change" id="-v[L*iQF/f7jI%a}wEAp">
+<field name="VAR" id="Cp~:]z_Iur.z6O=^nu!}">UpPos</field>
+<value name="DELTA">
+<shadow type="math_number" id="5}wMZ]ezedcxojj7zGJ/">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="I|t8HJlmW{KZ:,h3h{H[">
+<field name="VAR" id="tQ?`zs]^^-wn_T3t-Kc7">up target</field>
+</block>
+</value>
+<next>
+<block type="dcMotor_setProperty_Number" id="e_K;WV$|HGgR_t1tJ.jV">
+<field name="IDENTIFIER">testAsDcMotor</field>
+<field name="PROP">TargetPosition</field>
+<data>{"IDENTIFIER":"test"}</data>
+<value name="VALUE">
+<shadow type="math_number" id="9LPsXh;mI|b@cFi/+6nf">
+<field name="NUM">0</field>
+</shadow>
+<block type="variables_get" id="mw1Ut;MZm{_$qJd6v*o9">
+<field name="VAR" id="Cp~:]z_Iur.z6O=^nu!}">UpPos</field>
+</block>
+</value>
+<next>
+<block type="dcMotor_setProperty_RunMode" id="6qpXAQj=LbCN~XV()@mv">
+<field name="IDENTIFIER">testAsDcMotor</field>
+<field name="PROP">Mode</field>
+<data>{"IDENTIFIER":"test"}</data>
+<value name="VALUE">
+<shadow type="dcMotor_typedEnum_runMode" id="V%9/Y_!%O|}ad=L:!2FI">
+<field name="RUN_MODE">RUN_TO_POSITION</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setProperty_Number" id="aN3`[P~4Oh30w]jm+EBR">
+<field name="IDENTIFIER">testAsDcMotor</field>
+<field name="PROP">Power</field>
+<data>{"IDENTIFIER":"test"}</data>
+<value name="VALUE">
+<shadow type="math_number">
+<field name="NUM">0</field>
+</shadow>
+<block type="variables_get" id="%+$,)AGt=ap/bs#`#ekH">
+<field name="VAR" id="(tOAm#=uSI8l9FE*1t1z">Speed</field>
+</block>
+</value>
+<next>
+<block type="controls_whileUntil" id="jRGGouJ-Gk9wdJ@S~+`W">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_operation" id="ffsnhSkO%cbtRJgH;F|V">
+<field name="OP">AND</field>
+<value name="A">
+<block type="linearOpMode_opModeIsActive" id="dAYC2~heB?vSBApfXawu"/>
+</value>
+<value name="B">
+<block type="dcMotor_isBusy" id="2xUCf1c.Gb^qQCh2UN61">
+<field name="IDENTIFIER">testAsDcMotor</field>
+<data>{"IDENTIFIER":"test"}</data>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO">
+<block type="linearOpMode_idle" id="v(C~6E[Zq4FcgQoJj,Go"/>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml><?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Extra><OpModeMeta flavor="AUTONOMOUS" group="" autoTransition="4-Wheel Test Trial 2 (Alt) (1)" /><Enabled value="false" /></Extra>

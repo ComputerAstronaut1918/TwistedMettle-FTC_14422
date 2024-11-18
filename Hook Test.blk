@@ -1,0 +1,79 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="ouy64T;E/)%ySXc4Tz{)">button</variable>
+</variables>
+<block type="procedures_defnoreturn" id="WtpyD@tEu+EoY=P9iY,D" deletable="false" x="50" y="50">
+<field name="NAME">runOpMode</field>
+<comment pinned="false" h="45" w="532">This function is executed when this OpMode is selected from the Driver Station.</comment>
+<statement name="STACK">
+<block type="comment" id="Lc#BFtj*NTB48YL;eBl.">
+<field name="COMMENT">Put initialization blocks here.</field>
+<next>
+<block type="linearOpMode_waitForStart" id=":`$wN_ci`O;o6P0~.(+g">
+<next>
+<block type="controls_if" id="}Q?5mbxSO8Di;i!__6[y">
+<value name="IF0">
+<block type="linearOpMode_opModeIsActive" id=")o%YFX/#9kvv^sgXr4~5"/>
+</value>
+<statement name="DO0">
+<block type="controls_whileUntil" id="^0Kagy/e+Ea{rbZPv2G6">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="linearOpMode_opModeIsActive" id="e)cr{!2VIET83s,JWC.="/>
+</value>
+<statement name="DO">
+<block type="dcMotor_setProperty_Number" id="`?lM|atbwjSrb,Q=eZbe">
+<field name="IDENTIFIER">hookAsDcMotor</field>
+<field name="PROP">Power</field>
+<data>{"IDENTIFIER":"hook"}</data>
+<value name="VALUE">
+<shadow type="math_number" id="d#b|7mn37|rZobW~`Vx,">
+<field name="NUM">1</field>
+</shadow>
+<block type="gamepad_getProperty_Number" id="0J$|s`[OKcLj=+h!f:g0">
+<field name="IDENTIFIER">gamepad1</field>
+<field name="PROP">RightStickY</field>
+<data>{"IDENTIFIER":"gamepad1"}</data>
+</block>
+</value>
+</block>
+</statement>
+<next>
+<block type="dcMotor_setProperty_Number" id="Ju|.51T]lR+G(xK(WXoe">
+<field name="IDENTIFIER">hookAsDcMotor</field>
+<field name="PROP">Power</field>
+<data>{"IDENTIFIER":"hook"}</data>
+<value name="VALUE">
+<shadow type="math_number" id="ralIY3c2uzw4d}D4qLXd">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="ltkYRDW.L`2E)H|l0Nm-">
+<field name="VAR" id="ouy64T;E/)%ySXc4Tz{)">button</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="comment" id="(rU-p_T_/B|vExcs}liL" x="-170" y="315">
+<field name="COMMENT">Put run blocks here.</field>
+</block>
+<block type="controls_if" id="7mb)}AVas:KMgbgp%PvC" x="212" y="302">
+<mutation else="1"/>
+<value name="IF0">
+<block type="touchSensor_getProperty_Boolean" id="-:ETLOO~WsT9D(`0O16e">
+<field name="IDENTIFIER">stopAsTouchSensor</field>
+<field name="PROP">IsPressed</field>
+<data>{"IDENTIFIER":"stop"}</data>
+</block>
+</value>
+</block>
+<block type="telemetry_update" id="exvivmft-pX$n!1,8Ea$" x="295" y="386"/>
+</xml><?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Extra><OpModeMeta flavor="TELEOP" group="" /><Enabled value="false" /></Extra>

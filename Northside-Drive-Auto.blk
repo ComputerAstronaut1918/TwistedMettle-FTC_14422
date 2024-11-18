@@ -1,0 +1,272 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="procedures_defnoreturn" id="WtpyD@tEu+EoY=P9iY,D" deletable="false" x="50" y="50">
+<field name="NAME">runOpMode</field>
+<comment pinned="false" h="45" w="532">This function is executed when this Op Mode is selected from the Driver Station.</comment>
+<statement name="STACK">
+<block type="linearOpMode_waitForStart" id="8P7!j@UPT5|je=+:NvMg">
+<next>
+<block type="dcMotor_setProperty_Direction" id="mV]Vqa},B[?$]C;+e+3c">
+<field name="IDENTIFIER">motor0AsDcMotor</field>
+<field name="PROP">Direction</field>
+<data>{"IDENTIFIER":"motor 0"}</data>
+<value name="VALUE">
+<shadow type="dcMotor_typedEnum_direction" id="0#On@63Y{fV4#(fV}.$N">
+<field name="DIRECTION">REVERSE</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setProperty_Direction" id="y{8bk4oDWk=n^eF4oClA">
+<field name="IDENTIFIER">motor3AsDcMotor</field>
+<field name="PROP">Direction</field>
+<data>{"IDENTIFIER":"motor 3"}</data>
+<value name="VALUE">
+<shadow type="dcMotor_typedEnum_direction" id="K12i*Wd27NT!owyTCM!G">
+<field name="DIRECTION">REVERSE</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setDualProperty_RunMode" id="Y;/Y!`9)?@V@dCBef^MF">
+<field name="PROP">Mode</field>
+<field name="IDENTIFIER1">motor0AsDcMotor</field>
+<field name="IDENTIFIER2">motor3AsDcMotor</field>
+<data>{"IDENTIFIER1":"motor 0","IDENTIFIER2":"motor 3"}</data>
+<value name="VALUE1">
+<shadow type="dcMotor_typedEnum_runMode" id="i``(]A3fbmb`o!)MiL$O">
+<field name="RUN_MODE">STOP_AND_RESET_ENCODER</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="dcMotor_typedEnum_runMode" id="wNQctIkU-M4Q.+11gnf}">
+<field name="RUN_MODE">STOP_AND_RESET_ENCODER</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setDualProperty_RunMode" id="u_pubEQDG5-F-@8zOr86">
+<field name="PROP">Mode</field>
+<field name="IDENTIFIER1">motor1AsDcMotor</field>
+<field name="IDENTIFIER2">motor2AsDcMotor</field>
+<data>{"IDENTIFIER1":"motor 1","IDENTIFIER2":"motor 2"}</data>
+<value name="VALUE1">
+<shadow type="dcMotor_typedEnum_runMode" id="F3GUXMDg={Fq8h=tVWD(">
+<field name="RUN_MODE">STOP_AND_RESET_ENCODER</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="dcMotor_typedEnum_runMode" id="|qb3C/:8MMzo#R7FF9:_">
+<field name="RUN_MODE">STOP_AND_RESET_ENCODER</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setDualProperty_Number" id="~*o{.j@,]9ML$096-shL">
+<field name="PROP">TargetPosition</field>
+<field name="IDENTIFIER1">motor0AsDcMotor</field>
+<field name="IDENTIFIER2">motor3AsDcMotor</field>
+<data>{"IDENTIFIER1":"motor 0","IDENTIFIER2":"motor 3"}</data>
+<value name="VALUE1">
+<shadow type="math_number" id=",UMPvS%4FA*1`@Hl8^~!">
+<field name="NUM">1440</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="math_number" id="H7jpbJ`tGYwuMxCk)bx2">
+<field name="NUM">1440</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setDualProperty_Number" id="Ul{Sxk9PM8sZ=L#OWm8^">
+<field name="PROP">TargetPosition</field>
+<field name="IDENTIFIER1">motor1AsDcMotor</field>
+<field name="IDENTIFIER2">motor2AsDcMotor</field>
+<data>{"IDENTIFIER1":"motor 1","IDENTIFIER2":"motor 2"}</data>
+<value name="VALUE1">
+<shadow type="math_number" id="OoW=[=v*PO{0m.0WLMTx">
+<field name="NUM">1440</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="math_number" id="Rt43,EXEv`@tT^jf]j0d">
+<field name="NUM">1440</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setDualProperty_RunMode" id="^3px+re[xtSPY`rk%}s`">
+<field name="PROP">Mode</field>
+<field name="IDENTIFIER1">motor0AsDcMotor</field>
+<field name="IDENTIFIER2">motor3AsDcMotor</field>
+<data>{"IDENTIFIER1":"motor 0","IDENTIFIER2":"motor 3"}</data>
+<value name="VALUE1">
+<shadow type="dcMotor_typedEnum_runMode" id="7z.yR-.E$k0Yd:BBF[W@">
+<field name="RUN_MODE">RUN_TO_POSITION</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="dcMotor_typedEnum_runMode" id="J2n{rs;i=+s}K;R#4)nj">
+<field name="RUN_MODE">RUN_TO_POSITION</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setDualProperty_RunMode" id="}lG?v}HVn=^v~Hvy:*G_">
+<field name="PROP">Mode</field>
+<field name="IDENTIFIER1">motor1AsDcMotor</field>
+<field name="IDENTIFIER2">motor2AsDcMotor</field>
+<data>{"IDENTIFIER1":"motor 1","IDENTIFIER2":"motor 2"}</data>
+<value name="VALUE1">
+<shadow type="dcMotor_typedEnum_runMode" id="`e0$Ge`ePt^qA_-pWxH8">
+<field name="RUN_MODE">RUN_TO_POSITION</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="dcMotor_typedEnum_runMode" id="0GngU2ONK=5*!y:#E^7a">
+<field name="RUN_MODE">RUN_TO_POSITION</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setDualProperty_Number" id="ao$b0.[!$lTFb.m=/afa">
+<field name="PROP">Power</field>
+<field name="IDENTIFIER1">motor0AsDcMotor</field>
+<field name="IDENTIFIER2">motor3AsDcMotor</field>
+<data>{"IDENTIFIER1":"motor 0","IDENTIFIER2":"motor 3"}</data>
+<value name="VALUE1">
+<shadow type="math_number" id="M#x0+)?4;EKt=Bb#GPtA">
+<field name="NUM">0.5</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="math_number" id="0J;%/.sEu(X`x]pLMv7J">
+<field name="NUM">0.5</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setDualProperty_Number" id="-t8Ex_QB`Iri/WF/9c?x">
+<field name="PROP">Power</field>
+<field name="IDENTIFIER1">motor1AsDcMotor</field>
+<field name="IDENTIFIER2">motor2AsDcMotor</field>
+<data>{"IDENTIFIER1":"motor 1","IDENTIFIER2":"motor 2"}</data>
+<value name="VALUE1">
+<shadow type="math_number" id="b%VC%hp`qw.IkEQ!.eu.">
+<field name="NUM">0.5</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="math_number" id="0fC,OxS?/cD?g.ofXa|H">
+<field name="NUM">0.5</field>
+</shadow>
+</value>
+<next>
+<block type="controls_whileUntil" id="%.V@Z|zO:M9XR{CVrKPN">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_operation" id="%r=?X`d2p=pN|{8PB(7i">
+<field name="OP">AND</field>
+<value name="A">
+<block type="dcMotor_isBusy" id="k,;}W;#{=qhlg?RT3fXW">
+<field name="IDENTIFIER">motor1AsDcMotor</field>
+<data>{"IDENTIFIER":"motor 1"}</data>
+</block>
+</value>
+<value name="B">
+<block type="dcMotor_isBusy" id="/4a!p0F|x$dzAQ92=IG5">
+<field name="IDENTIFIER">motor2AsDcMotor</field>
+<data>{"IDENTIFIER":"motor 2"}</data>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="dcMotor_setDualProperty_Number" id="^N@{9l|xZ)mx[T5bll*-">
+<field name="PROP">Power</field>
+<field name="IDENTIFIER1">motor0AsDcMotor</field>
+<field name="IDENTIFIER2">motor3AsDcMotor</field>
+<data>{"IDENTIFIER1":"motor 0","IDENTIFIER2":"motor 3"}</data>
+<value name="VALUE1">
+<shadow type="math_number" id="kWiG#i:i#$#iXsItB8!k">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="math_number" id="dVrbp=LpSi]8yvl7yfQO">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setDualProperty_Number" id="ZuPNL^[(-XWO;Y@Xx%nn">
+<field name="PROP">Power</field>
+<field name="IDENTIFIER1">motor0AsDcMotor</field>
+<field name="IDENTIFIER2">motor3AsDcMotor</field>
+<data>{"IDENTIFIER1":"motor 0","IDENTIFIER2":"motor 3"}</data>
+<value name="VALUE1">
+<shadow type="math_number" id="[a[a.=9X{M4T.pt]5)(.">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="math_number" id="dm-`iNuP-l7d$NSNbvmJ">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setDualProperty_RunMode" id="lF,(`lOT|D+,.KaxLiB@">
+<field name="PROP">Mode</field>
+<field name="IDENTIFIER1">motor1AsDcMotor</field>
+<field name="IDENTIFIER2">motor2AsDcMotor</field>
+<data>{"IDENTIFIER1":"motor 1","IDENTIFIER2":"motor 2"}</data>
+<value name="VALUE1">
+<shadow type="dcMotor_typedEnum_runMode" id="nf/1Az_@j7j9BF%7n(u7">
+<field name="RUN_MODE">RUN_USING_ENCODER</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="dcMotor_typedEnum_runMode" id="!vpzTajQS;k9Z`erou.?">
+<field name="RUN_MODE">RUN_USING_ENCODER</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setDualProperty_RunMode" id="ZFwVj}fGQ0oRZULRX8;F">
+<field name="PROP">Mode</field>
+<field name="IDENTIFIER1">motor1AsDcMotor</field>
+<field name="IDENTIFIER2">motor2AsDcMotor</field>
+<data>{"IDENTIFIER1":"motor 1","IDENTIFIER2":"motor 2"}</data>
+<value name="VALUE1">
+<shadow type="dcMotor_typedEnum_runMode" id="lSmdo9}A^?By)#wks*4%">
+<field name="RUN_MODE">RUN_USING_ENCODER</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="dcMotor_typedEnum_runMode" id="sS:7n+XA^z-E0A!e/1Tj">
+<field name="RUN_MODE">RUN_USING_ENCODER</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml><?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Extra><OpModeMeta flavor="AUTONOMOUS" group="" /><Enabled value="false" /></Extra>
